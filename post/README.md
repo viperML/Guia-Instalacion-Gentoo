@@ -77,3 +77,31 @@ Junto con `eix`, `equery` es un comando fundamental que sirve para obtener infor
 ![](../img/equery.png)
 
 ## Keywords y slots
+
+Aparte de las USE flags, otra característica muy útil de Gentoo son las keywords y los slots. Con ellos podemos controlar las versiones de los paquetes que se instalan.
+
+### Keywords
+
+Básicamente, por defecto un paquete se instala en la versión estable. Si queremos instalar (y existe) la versión reciente/inestable, podemos añadirlo a `/etc/portage/package.accept_keywords`
+
+![](../img/keywords.png)
+
+En la captura de pantalla, python está instalado en el canal estable (verde) en la versión 3.9. Podemos aceptar el canal inestable (amarillo), añadiendo `dev-lang/python` en una línea nueva en `/etc/portage/package.accept_keywords`.
+
+![](../img/keywords2.png)
+
+En este caso, tenemos versiones estables de i3, y la versión `9999`, que se descarga directamente de git. El color no es amarillo, así que tenemos que aceptarla manualmente, añadiendo a nuestro accept_keywords:
+
+```
+=x11-wm/i3-9999 **
+```
+
+### Slots
+
+Algunos paquetes admiten instalar varias versiones a la vez. A esto se llama "Slots", y en la salida de eix salen en naranja entre paréntesis.
+
+Por ejemplo, en la captura anterior de python, tenemos varios slots adicionales disponibles. Podemos instalar Python 3.7 con:
+
+```sh
+sudo emerge python:3.7
+```

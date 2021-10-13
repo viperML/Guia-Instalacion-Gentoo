@@ -18,7 +18,7 @@
 - [7. Crear cuentas](#7-crear-cuentas)
 - [8. Instalar KDE Plasma](#8-instalar-kde-plasma)
 - [9. Salir](#9-salir)
-  - [10. Post instalación](#10-post-instalación)
+- [10. Post instalación](#10-post-instalación)
 
 Esta guía expone cómo instalar Gentoo rápidamente, usando paquetes binarios. Gentoo es una distribución que pone su énfasis en las opciones. El manual oficial de Gentoo sobre la instalación
 es un buen recurso para conseguir un sistema Gentoo, pero como el propio manual explica, muchos pasos tienen varias opciones a elegir por el usuario, y se han elegido
@@ -398,7 +398,7 @@ umount -R /mnt/gentoo
 reboot
 ```
 
-## [10. Post instalación](post/README.md)
+# [10. Post instalación](post/README.md)
 
 <br>
 <br>
