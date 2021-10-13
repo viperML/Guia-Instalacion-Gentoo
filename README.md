@@ -18,6 +18,7 @@
 - [7. Crear cuentas](#7-crear-cuentas)
 - [8. Instalar KDE Plasma](#8-instalar-kde-plasma)
 - [9. Salir](#9-salir)
+  - [10. Post instalación](#10-post-instalación)
 
 Esta guía expone cómo instalar Gentoo rápidamente, usando paquetes binarios. Gentoo es una distribución que pone su énfasis en las opciones. El manual oficial de Gentoo sobre la instalación
 es un buen recurso para conseguir un sistema Gentoo, pero como el propio manual explica, muchos pasos tienen varias opciones a elegir por el usuario, y se han elegido
@@ -35,6 +36,15 @@ Se cubrirá una instalación de Gentoo dirigida a un PC de sobremesa para uso co
 
 Si alguna vez has realizado una instalación de Arch Linux, esta guía debería ser igual o más fácil de seguir. Si sólo has hecho instalaciones con interfaces gráficas, te recomiendo hacer esta instalación antes en una máquina virtual para probar.
 
+La mayoría de comandos se puede ir copiando/pegando desde el navegador, pero por favor lee todo para saber qué está pasando y poder cambiar lo que hace falta ^^
+
+Otros links de interés:
+
+- [Gentoo Handbook](https://wiki.gentoo.org/wiki/Handbook:AMD64/es) - Guia de instalacion oficial
+- [Gentoo Wiki](https://wiki.gentoo.org/wiki/Main_Page) - Documentación general
+- https://wiki.gentoo.org/wiki/Btrfs - Documentación sobre el uso de BTRFS
+- https://packages.gentoo.org - Lista de paquetes de los repositorios principales
+- https://gpo.zugaina.org - Lista de paquetes de terceros
 
 # 0. Conseguir el medio de instalación
 
@@ -387,5 +397,10 @@ umount -l /mnt/gentoo/dev{/shm,/pts,}
 umount -R /mnt/gentoo
 reboot
 ```
+
+## [10. Post instalación](post/README.md)
+
+<br>
+<br>
 
 ![final](img/final.png)
