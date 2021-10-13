@@ -12,11 +12,12 @@ Se cubrirá una instalación de Gentoo dirigida a un PC de sobremesa para uso co
 - Paquetes binarios
 - KDE Plasma
 - Systemd
+- Paquetes estables
 - BTRFS
 - Arquitectura x86_64
 - UEFI + GPT
 
-Si alguna vez has realizado una instalación de Arch Linux, esta guía debería ser igual o más fácil.
+Si alguna vez has realizado una instalación de Arch Linux, esta guía debería ser igual o más fácil de seguir.
 
 
 0. Conseguir el medio de instalación
@@ -234,6 +235,7 @@ Para configurar systemd:
 systemd-machine-id-setup
 systemctl preset-all
 systemctl enable systemd-timesyncd
+echo "gentoo" > /etc/hostname
 ```
 
 6. Instalar el kernel
@@ -283,6 +285,16 @@ useradd -m -G wheel,audio,video,adm,uucp,plugdev user
 passwd user
 ```
 
+Con el comando `visudo`, decomentamos la línea que afecta al grupo `wheel`, según si queremos usar contraseña o con con sudo:
+
+```sh
+## Uncomment to allow members of group wheel to execute any command
+# %wheel ALL=(ALL) ALL
+
+## Same thing without a password
+%wheel ALL=(ALL) NOPASSWD: ALL
+```
+
 10. Drivers de almacenamiento
 ```sh
 emerge dosfstools
@@ -297,3 +309,24 @@ Editamos `/etc/portage/package.use/my-use`
 kde-plasma/plasma-meta -crash-handler -firewall
 ```
 
+```sh
+sudo tail -f /mnt/gentoo/var/log/emerge-fetch.log
+```
+
+```sh
+emerge plasma-meta konsole
+# ...
+systemctl enable sddm
+```
+
+11. Salir
+
+
+```sh
+rm /stage3*
+exit
+cd /
+umount -l /mnt/gentoo/dev{/shm,/pts,}
+umount -R /mnt/gentoo
+reboot
+```
