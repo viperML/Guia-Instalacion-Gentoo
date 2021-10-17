@@ -110,7 +110,7 @@ sudo emerge python:3.7
 
 ### [Instalar software de terceros](README-third.md)
 
-### Instalar Steam y Lutris
+### [Instalar Steam y Lutris](README-steam.md)
 
 ### Instalar Wine
 
