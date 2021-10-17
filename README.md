@@ -5,7 +5,7 @@
 # Guia de instalación de Gentoo en español
 
 - [Guia de instalación de Gentoo en español](#guia-de-instalación-de-gentoo-en-español)
-- [0. Conseguir el medio de instalación](#0-conseguir-el-medio-de-instalación)
+- [0. Iniciar el medio de instalación](#0-iniciar-el-medio-de-instalación)
 - [1. Preparar los discos](#1-preparar-los-discos)
 - [2. Instalar el sistema base](#2-instalar-el-sistema-base)
   - [Instalar la stage3](#instalar-la-stage3)
@@ -20,33 +20,33 @@
 - [9. Salir](#9-salir)
 - [10. Post instalación](#10-post-instalación)
 
-Esta guía expone cómo instalar Gentoo rápidamente, usando paquetes binarios. Gentoo es una distribución que pone su énfasis en las opciones. El manual oficial de Gentoo sobre la instalación
-es un buen recurso para conseguir un sistema Gentoo, pero como el propio manual explica, muchos pasos tienen varias opciones a elegir por el usuario, y se han elegido
-las opciones más convenientes para la mayoría de casos. Por lo tanto, en esta guía se proponen otra serie de pasos a seguir, no como una alternativa "mejor" al
-handbook, sino eligiendo otras opciones que pueden ser de interés para un usuario nuevo en Gentoo.
+Gentoo es una distribución de Linux dirigida a usuarios más avanzados y que pone su foco en darle a los usuarios mayor control sobre sus sistema. La comunidad también se refiere a Gentoo como una "meta-distribucón", porque entre sistema y sistema puede haber muchos componentes distintos (como systemd o openrc, glibc o musl, etc), siendo "portage", el gestor de paquetes, de los pocos elementos comunes.
 
-Se cubrirá una instalación de Gentoo dirigida a un PC de sobremesa para uso corriente (no para uso en servidor o en arquitecturas más exóticas), con las siguientes características:
+Ante la cantidad de opciones que ofrece Gentoo, esta guía ofrece un camino rápido, con muchas elecciones por mi parte que creo que pueden ser útiles para un usuario nuevo. Igualmente, una vez tengamos nuestro sistema Gentoo, se podrán ir cambiando algunos componentes, como el entorno de escritorio, las flags de compilación o el kernel.
 
-- Paquetes binarios de la rama estable
+Por lo tanto, estas elecciones en cuanto a configuración del sistema son:
+
+- Instalación con paquetes binarios
 - KDE Plasma como entorno de escritorio
-- Systemd en vez de OpenRC
+- Systemd como sistema de inicio (en vez de Openrc)
+- Glibc, sin SELinux o el perfil Hardened
 - BTRFS como sistema de almacenamiento
 - Arquitectura x86_64
 - UEFI + GPT
 
-Si alguna vez has realizado una instalación de Arch Linux, esta guía debería ser igual o más fácil de seguir. Si sólo has hecho instalaciones con interfaces gráficas, te recomiendo hacer esta instalación antes en una máquina virtual para probar.
 
+La instalación será totalmente desde la línea de comandos. Si alguna vez has instalado Arch a mano, esta guía será muy parecida, sólo que configurando algunos arhivos más.
 La mayoría de comandos se puede ir copiando/pegando desde el navegador, pero por favor lee todo para saber qué está pasando y poder cambiar lo que hace falta ^^
 
 Otros links de interés:
 
-- [Gentoo Handbook](https://wiki.gentoo.org/wiki/Handbook:AMD64/es) - Guia de instalacion oficial
+- [Gentoo Handbook](https://wiki.gentoo.org/wiki/Handbook:AMD64/es) - Guia de instalación oficial
 - [Gentoo Wiki](https://wiki.gentoo.org/wiki/Main_Page) - Documentación general
-- https://wiki.gentoo.org/wiki/Btrfs - Documentación sobre el uso de BTRFS
+- https://wiki.gentoo.org/wiki/Btrfs - Documentación sobre BTRFS
 - https://packages.gentoo.org - Lista de paquetes de los repositorios principales
 - https://gpo.zugaina.org - Lista de paquetes de terceros
 
-# 0. Conseguir el medio de instalación
+# 0. Iniciar el medio de instalación
 
 Para la instalación de Gentoo no hace falta usar el Live System de Gentoo, sirve cualquier distro de Linux. En este tutorial usaré el [Live System de Ubuntu](https://ubuntu.com/download/desktop),
 porque ofrece un entorno gráfico para abrir Firefox, usar el ratón en la terminal, copiar y pegar los comandos, etc.
@@ -398,7 +398,9 @@ umount -R /mnt/gentoo
 reboot
 ```
 
-# [10. Post instalación](post/README.md)
+# [10. Post instalación](README-post.md)
+
+Por favor continúa a la sección de post instalación antes de empezar a usar tu sistema.
 
 <br>
 <br>

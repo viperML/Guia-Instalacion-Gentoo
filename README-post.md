@@ -105,3 +105,13 @@ Por ejemplo, en la captura anterior de python, tenemos varios slots adicionales 
 ```sh
 sudo emerge python:3.7
 ```
+
+## Otras guías
+
+### [Instalar software de terceros](README-third.md)
+
+### Instalar Steam y Lutris
+
+### Instalar Wine
+
+### Compilar nuestro propio kernel con Genkernel
